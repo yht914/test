@@ -1,16 +1,22 @@
 # Streamlitライブラリをインポート
-import streamlit as st
-
-# 西側諸国の国名をリストに格納
-western_countries = ["アメリカ", "イギリス", "フランス", "ドイツ", "トルコ", "日本", "韓国", "イスラエル", "サウジアラビア"]
+# 世界の首都のリスト
+capitals = {
+    "日本": "東京",
+    "アメリカ": "ワシントンD.C.",
+    "イギリス": "ロンドン",
+    "フランス": "パリ",
+    "ドイツ": "ベルリン",
+    "中国": "北京",
+    "インド": "ニューデリー",
+    "ブラジル": "ブラジリア",
+    "ロシア": "モスクワ",
+}
 
 # ランダムな国名を取得
-random_country = western_countries[random.randint(0, len(western_countries) - 1)]
+random_country = list(capitals.keys())[random.randint(0, len(capitals) - 1)]
 
-# アプリのUIを作成
-st.title("ランダムな西側諸国の国")
-st.write("ランダムに選択された国は、" + random_country + "です。")
-    
+# ランダムに選択された首都を表示
+print("ランダムに選択された首都は、" + capitals[random_country] + "です。")
 
     
 
